@@ -1,9 +1,12 @@
-package com.geeeeeeeek.hacktools;
+package com.geeeeeeeek.hacktools.recyclerview;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+
+import com.geeeeeeeek.hacktools.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,10 +25,10 @@ public class MainActivity extends AppCompatActivity {
         data.add(new Student("http://p3.pstatp.com/origin/3a07000086e601d3f2a6", "hahhhh"));
         data.add(new Student("http://p3.pstatp.com/origin/3a07000086e601d3f2a6", "hahhhh"));
         data.add(new Student("http://p3.pstatp.com/origin/3a07000086e601d3f2a6", "hahhhh"));
-        data.add(new Student("http://p3.pstatp.com/origin/3a07000086e601d3f2a6", "hahhhh"));
 
         mRecyclerView = (RecyclerView)findViewById(R.id.recycler_view);
         mRecyclerView.setLayoutManager(new GridLayoutManager(this, 4));
+//        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.setAdapter(new RvAdapter(this,data));
     }
 

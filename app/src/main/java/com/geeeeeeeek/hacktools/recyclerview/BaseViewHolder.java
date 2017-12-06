@@ -1,4 +1,4 @@
-package com.geeeeeeeek.hacktools;
+package com.geeeeeeeek.hacktools.recyclerview;
 
 import android.content.Context;
 import android.content.Intent;

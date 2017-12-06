@@ -1,4 +1,4 @@
-package com.geeeeeeeek.hacktools;
+package com.geeeeeeeek.hacktools.recyclerview;
 
 import android.content.Context;
 import android.net.Uri;
@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
+
+import com.geeeeeeeek.hacktools.R;
 
 import java.util.List;
 
@@ -35,8 +37,7 @@ public class RvAdapter extends RecyclerView.Adapter<BaseViewHolder> {
     @Override
     public void onBindViewHolder(BaseViewHolder holder, int position) {
         Student student = data.get(position);
-        holder.setText(R.id.tv_name, student.name)
-                .setImageURI(R.id.iv_avatar, Uri.parse(student.url));
+        holder.setText(R.id.tv_name, student.name);
         holder.setOnClickListener(R.id.tv_name, new View.OnClickListener() {
             @Override
             public void onClick(View v) {
